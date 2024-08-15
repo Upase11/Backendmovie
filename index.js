@@ -10,11 +10,7 @@ import routes from "./src/routes/index.js";
 const app = express();
 
 app.use(
-  cors({
-    origin: [ "http://localhost:5000"],
-    credentials: true,
-  })
-);
+  cors());
 
 app.options("*", cors());
 app.use(express.json());
