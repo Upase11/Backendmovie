@@ -20,6 +20,9 @@ app.options("*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.get("/", (req, res) => {
+  res.send("<h1> Backend</h1>");
+});
 app.use("/api/v1", routes);
 
 const port = process.env.PORT || 5000;
